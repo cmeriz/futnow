@@ -1,0 +1,68 @@
+input{
+    font-size: 1rem;
+    color: $secondary-color-800;
+    padding: 1em 1.5em;
+    border: 1px solid;
+    border-color: $secondary-color-400;
+    border-radius: $default-radius + 0rem;
+    font-family: $secondary-font;
+    background-color: $secondary-color-50;
+
+    &::placeholder{
+        color: $secondary-color-400;
+
+        @include dark-theme{
+            color: $secondary-color-500;
+        }
+
+    }
+
+    &:focus{
+        outline: 3px solid ;
+        outline-color: $primary-color-200;
+        border-color: $primary-color-200;
+
+        @include dark-theme{
+            outline-color: $secondary-color-500;
+            border-color: $secondary-color-500;
+        }
+
+    }
+
+    @include dark-theme{
+        background-color: $secondary-color-800;
+        border-color: $secondary-color-600;
+        color: $secondary-color-50;
+    }
+
+
+    &[type=search]{
+        padding: 1em 3em 1em 1.5em;
+        background-size: 2.5rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 45 20' fill='%2371717A'%3E%3Cpath fill-rule='evenodd' d='M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z' clip-rule='evenodd' /%3E%3C/svg%3E");
+        background-position: center right;
+        background-repeat: no-repeat;        
+    }
+
+}
+
+select{
+    @extend input;
+    padding: 1em 3em 1em 1.5em;
+    appearance: none;
+    background-color: $secondary-color-50;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 45 20' fill='%2327272a'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
+    background-size: 2.5rem;
+    background-position: center right;
+    background-repeat: no-repeat;   
+    
+    @include dark-theme{
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 45 20' fill='%23fafafa'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
+        background-color: $secondary-color-800;
+    }
+    
+}
+
+option{
+    @extend input;
+}

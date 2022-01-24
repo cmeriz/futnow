@@ -1,0 +1,108 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1.6rem 0;
+    border-bottom: 1px solid;
+    border-color: $secondary-color-200;
+    position: relative;
+
+    @include md-size{
+        padding: 1.1rem 0;
+    }
+
+    @include dark-theme{
+        border-color: $secondary-color-700;
+    }
+
+    &__logo{
+        display: contents;
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__link{
+        display: inline-block;
+    }
+
+    &__about{
+        display: none;
+        
+        @include sm-size{
+            display: inline-block;
+        }
+
+    }
+
+
+    &__favorites{
+        &__dropdown{
+            @extend .default-shadow;
+            position: absolute;
+            top: 90%;
+            right: 0;
+            width: 100%;
+            border-radius: $default-radius + 0rem;
+            border: 1px solid;
+            border-color: $secondary-color-200;
+            overflow: hidden;
+            transition: visibility .3s ease, opacity .3s ease;
+
+            @include dark-theme{
+                border-color: $secondary-color-600;
+            }
+
+            @include sm-size{
+                width: 24rem;
+            }
+
+        }
+    }
+
+}
+
+.btn--favorites{
+    all: unset;
+    display: flex;
+    align-items: center;
+    color: $primary-color-800;
+    background-color: $primary-color-50;
+    height: 3rem;
+    padding: 0 1.5rem;
+    border: 1px solid;
+    border-color: $primary-color-100;
+    border-radius: $default-radius + 0em;
+    gap: .5rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+
+    @include dark-theme{
+        color: $secondary-color-50;
+        background-color: $secondary-color-800;
+        border-color: $secondary-color-600;
+    }
+
+    &:focus{
+        outline: 3px solid $primary-color-200;
+
+        @include dark-theme{
+            outline: 3px solid $secondary-color-500;
+        }
+
+    }
+
+    &__star{
+        height: 1.3rem;
+    }
+
+    &__chevron{
+        height: 1rem;
+    }
+
+}

@@ -1,0 +1,48 @@
+html{
+    font-size: 1rem;
+    color: $secondary-color-800;
+
+    @include dark-theme{
+        color: $secondary-color-50;
+    }
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: $secondary-font;
+    background-color: $secondary-color-0;
+
+    @include dark-theme{
+        background-color: $secondary-color-900;
+    }
+
+}
+
+html, body{
+    height: 100%;
+}
+
+.wrapper{
+    flex: 1;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 40px;
+}
+
+h1{
+    font-family: $primary-font;
+}
+
+h1, p{
+    line-height: 1.5em;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}

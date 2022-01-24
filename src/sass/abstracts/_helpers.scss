@@ -1,0 +1,36 @@
+.img--light{
+    display: none;
+    @include light-theme{
+        display: block;   
+    }
+}
+
+.img--dark{
+    display: none;
+    @include dark-theme{
+        display: block;   
+    }
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hidden-modal{
+    visibility: hidden;
+    opacity: 0;
+    
+    .modal__window{
+        transform: translateY(100%);
+    }
+
+}
+
+.no-scroll{
+    overflow-y: hidden;
+}
+
+.default-shadow{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

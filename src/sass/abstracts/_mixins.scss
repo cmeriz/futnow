@@ -1,0 +1,68 @@
+// Media Queries
+
+@mixin xs-size{
+    @media screen and (min-width: 0rem) {      // 0px
+        @content;
+    }
+}
+
+@mixin sm-size{
+    @media screen and (min-width: 36rem) {      // 576px
+        @content;
+    }
+}
+
+@mixin md-size{
+    @media screen and (min-width: 48rem) {      // 768px
+        @content;
+    }
+}
+
+@mixin lg-size{
+    @media screen and (min-width: 62rem) {      // 992px
+        @content;
+    }
+}
+
+@mixin xl-size{
+    @media screen and (min-width: 75rem) {      // 1200px
+        @content;
+    }
+}
+
+@mixin xxl-size{
+    @media screen and (min-width: 87.5rem) {      // 1400px
+        @content;
+    }
+}
+
+// 0rem        -> 0px       ->      xs
+// 36rem       -> 576px     ->      sm
+// 48rem       -> 768px     ->      md
+// 62rem       -> 992px     ->      lg
+// 75rem       -> 1200px    ->      xl
+// 87.5rem     -> 1400px    ->      xxl
+
+
+@mixin custom-size($value){
+    @media screen and (min-width: $value) {
+        @content;
+    }
+}
+
+// Themes
+@mixin dark-theme(){
+    @media (prefers-color-scheme: dark) {
+        &{
+            @content;
+        }
+    }
+}
+
+@mixin light-theme(){
+    @media (prefers-color-scheme: light) {
+        &{
+            @content;
+        }
+    }
+}

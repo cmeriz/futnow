@@ -1,0 +1,23 @@
+.footer{
+    background-color: $primary-color-800;
+    padding: 1.5rem 0;
+    text-align: center;
+    
+    @include lg-size{
+        padding: 1.8rem 0;
+        text-align: end;
+    }
+
+    @include dark-theme{
+        background-color: $secondary-color-800;
+    }
+
+    p{
+        color: $secondary-color-50;
+    }
+
+    &__link{
+        color: $secondary-color-50;
+    }
+
+}

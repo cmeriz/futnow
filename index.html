@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FUTNow | The Best League's Standings</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="src/js/navbar.js"></script>
+        <script defer src="src/js/league-modal.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">        
+            <header class="header">
+                <nav class="navbar">
+                    <!-- Logo -->
+                    <a class="navbar__logo" href="/">
+                        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 538 181.14011">
+                            <g>
+                                <g class="logo__fut">
+                                    <path
+                                        d="M192.14028,362.04074H159.41967q-5.73846,0-8.01836,2.21625-2.282,2.21676-2.281,7.69054v12.907h34.02553l-1.30492,16.1651H149.12035v37.67505H131V364.77789q0-10.29614,4.49614-14.60131,4.50037-4.30146,15.449-4.302h41.19516Z"
+                                        transform="translate(-131 -309.42994)" />
+                                    <path
+                                        d="M276.09437,345.87459v61.01084q0,15.12435-10.23354,23.8567-10.23567,8.7366-25.22421,8.73447-14.99385,0-25.22633-8.73447-10.23567-8.73183-10.23355-23.8567V345.87459H223.2971V406.234q0,8.60452,4.75924,12.84127,4.755,4.2378,12.58028,4.23621,7.82,0,12.64393-4.23621,4.82184-4.23623,4.825-12.84127V345.87459Z"
+                                        transform="translate(-131 -309.42994)" />
+                                    <path
+                                        d="M355.35712,362.04074H330.45755v76.654H312.3372v-76.654H287.56706V345.87459h67.79006Z"
+                                        transform="translate(-131 -309.42994)" />
+                                </g>
+                                <g class="logo__now">
+                                    <path
+                                        d="M535.59734,490.57006a20.53572,20.53572,0,0,1-19.07942-12.958l-27.17841-67.86433a20.58115,20.58115,0,0,1,4.56192-22.2335L565.94574,315.47a20.59044,20.59044,0,0,1,22.23245-4.56085l67.86432,27.17734a20.5435,20.5435,0,0,1,12.1347,24.855l-25.28362,87.44873a20.50653,20.50653,0,0,1-14.074,14.07192l-87.44662,25.28468A20.79268,20.79268,0,0,1,535.59734,490.57006Zm44.92107-165.99431a5.46224,5.46224,0,0,0-3.866,1.602L504.60814,398.222a5.45849,5.45849,0,0,0-1.20944,5.89654L530.575,471.98184a5.44866,5.44866,0,0,0,6.59249,3.21775L624.6141,449.9149a5.4386,5.4386,0,0,0,3.73228-3.73122L653.63,358.736a5.44955,5.44955,0,0,0-3.21668-6.5925L582.549,324.96722A5.46568,5.46568,0,0,0,580.51841,324.57575Z"
+                                        transform="translate(-131 -309.42994)" opacity="0.1" />
+                                    <path
+                                        d="M441.7895,345.87459v83.43425a10.98414,10.98414,0,0,1-2.60771,7.36484,7.843,7.843,0,0,1-6.12782,3.06391q-8.9944,0-14.72969-10.42875L386.253,379.11822v59.57649H368.13261V345.87459h17.469l38.06759,60.75092V345.87459Z"
+                                        transform="translate(-131 -309.42994)" />
+                                    <path
+                                        d="M516.48609,401.15015q0,24.11874-9.12595,32.33019-7.69266,7.03861-22.29185,7.03914-18.64444,0-25.16056-10.95072Q453.781,419.532,453.782,401.15015q0-17.209,6.12569-26.98638,6.77922-10.9502,24.70437-10.95072,17.92514,0,24.89957,9.58214Q516.485,382.37682,516.48609,401.15015Zm-16.947,3.91052v-6.77922q0-9.64527-2.80293-14.73074-2.804-5.08442-11.66789-5.08495-14.34139,0-14.33927,19.29478v6.77816q0,20.72913,14.33927,20.72807,9.25538,0,12.12408-6.90865A33.722,33.722,0,0,0,499.53911,405.06067Z"
+                                        transform="translate(-131 -309.42994)" />
+                                    <path
+                                        d="M618.95308,364.257,598.225,438.69471H584.27616l-14.20984-45.23616-14.20984,45.23616H541.90763L521.05013,364.257h17.9888l10.95072,48.49528L561.3329,372.861q1.9542-8.60451,8.865-8.604a6.81025,6.81025,0,0,1,5.21332,2.08575,16.233,16.233,0,0,1,3.25911,6.51823l11.47269,39.8913L601.09371,364.257Z"
+                                        transform="translate(-131 -309.42994)" />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+
+                    <!-- Menu -->
+                    <ul class="navbar__menu">
+                        <li class="navbar__link navbar__about">
+                            <a href="#" class="btn--primary">
+                                About this project
+                            </a>
+                        </li>
+                        <li class="navbar__link navbar__favorites">
+                            <button class="btn--favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="btn--favorites__star" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="btn--favorites__chevron" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <ul class="navbar__favorites__dropdown leagues__list hidden">
+                                <li class="league">
+                                    <figure>
+                                        <img class="league__img img--light" src="./src/img/epl_light.png" alt="English Premier League">
+                                        <img class="league__img img--dark" src="./src/img/epl_dark.png" alt="English Premier League">
+                                    </figure>
+                                    <span class="league__name">English Premier League</span>
+                                    <svg class="league__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </li>
+                                <li class="league">
+                                    <figure>
+                                        <img class="league__img img--light" src="./src/img/laliga_light.png" alt="Spanish Primera División">
+                                        <img class="league__img img--dark" src="./src/img/laliga_dark.png" alt="Spanish Primera División">
+                                    </figure>
+                                    <span class="league__name">Spanish Primera División</span>
+                                    <svg class="league__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </li>
+                                <li class="league">
+                                    <figure>
+                                        <img class="league__img img--light" src="./src/img/bundes_light.png" alt="German Bundesliga">
+                                        <img class="league__img img--dark" src="./src/img/bundes_dark.png" alt="German Bundesliga">
+                                    </figure>
+                                    <span class="league__name">German Bundesliga</span>
+                                    <svg class="league__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="content">
+                <main class="main">
+                    <h1 class="main__title">Stay up to date with the best leagues in the world</h1>
+                    <a href="#" class="btn--primary main__link">
+                        About this project
+                    </a>
+                    <form class="main__form">
+                        <input type="search" placeholder="Search a league by name">
+                        <button type="submit" hidden></button>
+                    </form>
+                </main>
+    
+                <section class="leagues">
+                    <!-- 
+                    <img class="leagues__placeholder img--light" src="src/img/leagues.png" alt="Leagues">
+                    <img class="leagues__placeholder img--dark" src="src/img/leagues_dark.png" alt="Leagues">
+                    -->
+                    
+                    <div class="leagues__results">
+                        <h2 class="leagues__header">League</h2>
+                        <ul class="leagues__list">
+                            <li class="league">
+                                <figure>
+                                    <img class="league__img img--light" src="./src/img/epl_light.png" alt="English Premier League">
+                                    <img class="league__img img--dark" src="./src/img/epl_dark.png" alt="English Premier League">
+                                </figure>
+                                <span class="league__name">English Premier League</span>
+                                <svg class="league__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </li>
+                            <li class="league">
+                                <figure>
+                                    <img class="league__img img--light" src="./src/img/laliga_light.png" alt="Spanish Primera División">
+                                    <img class="league__img img--dark" src="./src/img/laliga_dark.png" alt="Spanish Primera División">
+                                </figure>
+                                <span class="league__name">Spanish Primera División</span>
+                                <svg class="league__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </li>
+                            <li class="league">
+                                <figure>
+                                    <img class="league__img img--light" src="./src/img/bundes_light.png" alt="German Bundesliga">
+                                    <img class="league__img img--dark" src="./src/img/bundes_dark.png" alt="German Bundesliga">
+                                </figure>
+                                <span class="league__name">German Bundesliga</span>
+                                <svg class="league__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </li>
+                        </ul>
+                        <div class="leagues__pagination">
+                            <button class="btn--pagination">1</button>
+                            <button class="btn--pagination" disabled>2</button>
+                            <button class="btn--pagination">3</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <div class="modal hidden-modal">
+            <div class="modal__background close-modal"></div>
+            <section class="modal__window modal-league">
+
+                <button class="modal__close close-modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+                <div class="modal__window__content">
+                    <!-- <div class="modal__loader-container">
+                        <span class="loader"></span>
+                    </div> -->
+
+                    <header class="modal-league__header">
+                            <figure>
+                                <img class="modal-league__img img--light" src="src/img/epl_light.png" alt="English Premier League">
+                                <img class="modal-league__img img--dark" src="src/img/epl_dark.png" alt="English Premier League">
+                            </figure>
+                            <h2 class="modal-league__name">English Premier League</h2>
+                    </header>
+    
+                    <div class="modal-league__controls">
+                        <select class="modal-league__select">
+                            <option>2020 - 2021</option>
+                            <option>2019 - 2020</option>
+                            <option>2018 - 2019</option>
+                        </select>
+                    </div>
+    
+                    <div class="modal-league__table-container">
+                        <table class="league-standings">
+                            <thead>
+                                <tr>
+                                    <th>Club</th>
+                                    <th>W</th>
+                                    <th>L</th>
+                                    <th>D</th>
+                                    <th>GP</th>
+                                    <th>F</th>
+                                    <th>A</th>
+                                    <th>P</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="league-standings__team">
+                                            <span class="league-standings__team__pos">1</span>
+                                            <figure>
+                                                <img class="league-standings__team__img" src="https://a.espncdn.com/i/teamlogos/soccer/500/382.png" alt="Manchester City">
+                                            </figure>
+                                            <span class="league-standings__team__name">Manchester City</span>
+                                            <span class="league-standings__team__abbr">MNC</span>
+                                        </div>
+                                    </td>
+                                    <td>10</td>
+                                    <td>5</td>
+                                    <td>7</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>6</td>
+                                    <td>37</td>
+                                </tr>
+    
+                                <tr>
+                                    <td>
+                                        <div class="league-standings__team">
+                                            <span class="league-standings__team__pos">2</span>
+                                            <figure>
+                                                <img class="league-standings__team__img" src="https://a.espncdn.com/i/teamlogos/soccer/500/360.png" alt="Manchester United">
+                                            </figure>
+                                            <span class="league-standings__team__name">Manchester United</span>
+                                            <span class="league-standings__team__abbr">MAN</span>
+                                        </div>
+                                    </td>
+                                    <td>10</td>
+                                    <td>5</td>
+                                    <td>7</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>6</td>
+                                    <td>37</td>
+                                </tr>
+    
+                                <tr>
+                                    <td>
+                                        <div class="league-standings__team">
+                                            <span class="league-standings__team__pos">3</span>
+                                            <figure>
+                                                <img class="league-standings__team__img" src="https://a.espncdn.com/i/teamlogos/soccer/500/364.png" alt="Liverpool">
+                                            </figure>
+                                            <span class="league-standings__team__name">Liverpool</span>
+                                            <span class="league-standings__team__abbr">LIV</span>
+                                        </div>
+                                    </td>
+                                    <td>10</td>
+                                    <td>5</td>
+                                    <td>7</td>
+                                    <td>24</td>
+                                    <td>8</td>
+                                    <td>6</td>
+                                    <td>37</td>
+                                </tr>
+    
+                            </tbody>
+                            <tfoot></tfoot>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <footer class="footer">
+            <p class="wrapper">
+                &copy FUTNow 2022. Developed by <a class="footer__link" href="https://cmeriz.com/" target="_blank" rel="noopener">@cmeriz</a>
+            </p>
+        </footer>
+    </body>
+
+</html>

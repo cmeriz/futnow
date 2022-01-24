@@ -1,0 +1,22 @@
+.logo{
+    width: 110px;
+
+    &__fut{
+        fill: $secondary-color-800;
+
+        @include dark-theme{
+            fill: $secondary-color-50;
+        }
+
+    }
+
+    &__now{
+        fill: $primary-color-500;
+
+        @include dark-theme{
+            fill: $secondary-color-50;
+        }
+
+    }
+
+}

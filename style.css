@@ -1,0 +1,1052 @@
+@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* line 5, ../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../Ruby27-x64/lib/ruby/gems/2.7.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              RED COLOR SHADES                              */
+/* -------------------------------------------------------------------------- */
+/* line 1, src/sass/abstracts/_helpers.scss */
+.img--light {
+  display: none;
+}
+@media (prefers-color-scheme: light) {
+  /* line 64, src/sass/abstracts/_mixins.scss */
+  .img--light {
+    display: block;
+  }
+}
+
+/* line 8, src/sass/abstracts/_helpers.scss */
+.img--dark {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .img--dark {
+    display: block;
+  }
+}
+
+/* line 15, src/sass/abstracts/_helpers.scss */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* line 20, src/sass/abstracts/_helpers.scss */
+.hidden-modal {
+  visibility: hidden;
+  opacity: 0;
+}
+/* line 24, src/sass/abstracts/_helpers.scss */
+.hidden-modal .modal__window {
+  transform: translateY(100%);
+}
+
+/* line 30, src/sass/abstracts/_helpers.scss */
+.no-scroll {
+  overflow-y: hidden;
+}
+
+/* line 34, src/sass/abstracts/_helpers.scss */
+.default-shadow, .navbar__favorites__dropdown {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* line 1, src/sass/base/_reset.scss */
+html {
+  font-size: 1rem;
+  color: #27272a;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  html {
+    color: #fafafa;
+  }
+}
+
+/* line 11, src/sass/base/_reset.scss */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  body {
+    background-color: #18181b;
+  }
+}
+
+/* line 23, src/sass/base/_reset.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 27, src/sass/base/_reset.scss */
+.wrapper {
+  flex: 1;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+}
+
+/* line 35, src/sass/base/_reset.scss */
+h1 {
+  font-family: "Viga", sans-serif;
+}
+
+/* line 39, src/sass/base/_reset.scss */
+h1, p {
+  line-height: 1.5em;
+}
+
+/* line 43, src/sass/base/_reset.scss */
+input[type="search"]::-webkit-search-decoration, select[type="search"]::-webkit-search-decoration, option[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+select[type="search"]::-webkit-search-cancel-button,
+option[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+select[type="search"]::-webkit-search-results-button,
+option[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration,
+select[type="search"]::-webkit-search-results-decoration,
+option[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 1, src/sass/components/_logo.scss */
+.logo {
+  width: 110px;
+}
+/* line 4, src/sass/components/_logo.scss */
+.logo__fut {
+  fill: #27272a;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .logo__fut {
+    fill: #fafafa;
+  }
+}
+/* line 13, src/sass/components/_logo.scss */
+.logo__now {
+  fill: #2364aa;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .logo__now {
+    fill: #fafafa;
+  }
+}
+
+/* line 1, src/sass/components/_buttons.scss */
+.btn, .btn--primary {
+  all: unset;
+  display: block;
+  color: #fafafa;
+  padding: 1em 1.5em;
+  border-radius: 0.375em;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: background-color .3s ease, outline-color .15s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 36rem) {
+  /* line 1, src/sass/components/_buttons.scss */
+  .btn, .btn--primary {
+    display: inline-block;
+  }
+}
+/* line 18, src/sass/components/_buttons.scss */
+.btn--primary {
+  background-color: #2364aa;
+}
+/* line 22, src/sass/components/_buttons.scss */
+.btn--primary:hover {
+  background-color: #205a99;
+}
+/* line 26, src/sass/components/_buttons.scss */
+.btn--primary:focus {
+  outline: 3px solid #a7c1dd;
+  background-color: #205a99;
+}
+/* line 33, src/sass/components/_buttons.scss */
+.btn--pagination {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border: unset;
+  border-radius: 0.375em;
+  cursor: pointer;
+  color: #fafafa;
+  font-family: "Viga", sans-serif;
+  font-size: 1.05rem;
+  background-color: #2364aa;
+  transition: background-color .3s ease, color .3s ease;
+}
+/* line 46, src/sass/components/_buttons.scss */
+.btn--pagination:hover {
+  background-color: #205a99;
+}
+/* line 50, src/sass/components/_buttons.scss */
+.btn--pagination:focus {
+  outline: 3px solid #a7c1dd;
+  background-color: #205a99;
+}
+/* line 55, src/sass/components/_buttons.scss */
+.btn--pagination:disabled {
+  cursor: default;
+  background-color: rgba(250, 250, 250, 0.1);
+  color: #27272a;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .btn--pagination:disabled {
+    color: #fafafa;
+  }
+}
+
+/* line 1, src/sass/components/_inputs.scss */
+input, select, option {
+  font-size: 1rem;
+  color: #27272a;
+  padding: 1em 1.5em;
+  border: 1px solid;
+  border-color: #a1a1aa;
+  border-radius: 0.375rem;
+  font-family: "Roboto", sans-serif;
+  background-color: #fafafa;
+}
+/* line 11, src/sass/components/_inputs.scss */
+input::placeholder, select::placeholder, option::placeholder {
+  color: #a1a1aa;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  input::placeholder, select::placeholder, option::placeholder {
+    color: #71717a;
+  }
+}
+/* line 20, src/sass/components/_inputs.scss */
+input:focus, select:focus, option:focus {
+  outline: 3px solid;
+  outline-color: #c8d8ea;
+  border-color: #c8d8ea;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  input:focus, select:focus, option:focus {
+    outline-color: #71717a;
+    border-color: #71717a;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  input, select, option {
+    background-color: #27272a;
+    border-color: #52525b;
+    color: #fafafa;
+  }
+}
+/* line 39, src/sass/components/_inputs.scss */
+input[type=search], select[type=search], option[type=search] {
+  padding: 1em 3em 1em 1.5em;
+  background-size: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 45 20' fill='%2371717A'%3E%3Cpath fill-rule='evenodd' d='M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z' clip-rule='evenodd' /%3E%3C/svg%3E");
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+/* line 49, src/sass/components/_inputs.scss */
+select {
+  padding: 1em 3em 1em 1.5em;
+  appearance: none;
+  background-color: #fafafa;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 45 20' fill='%2327272a'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
+  background-size: 2.5rem;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 45 20' fill='%23fafafa'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
+    background-color: #27272a;
+  }
+}
+
+/* line 1, src/sass/components/_navbar.scss */
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid;
+  border-color: #e4e4e7;
+  position: relative;
+}
+@media screen and (min-width: 48rem) {
+  /* line 1, src/sass/components/_navbar.scss */
+  .navbar {
+    padding: 1.1rem 0;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .navbar {
+    border-color: #3f3f46;
+  }
+}
+/* line 19, src/sass/components/_navbar.scss */
+.navbar__logo {
+  display: contents;
+}
+/* line 23, src/sass/components/_navbar.scss */
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+/* line 29, src/sass/components/_navbar.scss */
+.navbar__link {
+  display: inline-block;
+}
+/* line 33, src/sass/components/_navbar.scss */
+.navbar__about {
+  display: none;
+}
+@media screen and (min-width: 36rem) {
+  /* line 33, src/sass/components/_navbar.scss */
+  .navbar__about {
+    display: inline-block;
+  }
+}
+/* line 44, src/sass/components/_navbar.scss */
+.navbar__favorites__dropdown {
+  position: absolute;
+  top: 90%;
+  right: 0;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid;
+  border-color: #e4e4e7;
+  overflow: hidden;
+  transition: visibility .3s ease, opacity .3s ease;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .navbar__favorites__dropdown {
+    border-color: #52525b;
+  }
+}
+@media screen and (min-width: 36rem) {
+  /* line 44, src/sass/components/_navbar.scss */
+  .navbar__favorites__dropdown {
+    width: 24rem;
+  }
+}
+
+/* line 69, src/sass/components/_navbar.scss */
+.btn--favorites {
+  all: unset;
+  display: flex;
+  align-items: center;
+  color: #153c66;
+  background-color: #f4f7fb;
+  height: 3rem;
+  padding: 0 1.5rem;
+  border: 1px solid;
+  border-color: #e9f0f7;
+  border-radius: 0.375em;
+  gap: .5rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .btn--favorites {
+    color: #fafafa;
+    background-color: #27272a;
+    border-color: #52525b;
+  }
+}
+/* line 91, src/sass/components/_navbar.scss */
+.btn--favorites:focus {
+  outline: 3px solid #c8d8ea;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .btn--favorites:focus {
+    outline: 3px solid #71717a;
+  }
+}
+/* line 100, src/sass/components/_navbar.scss */
+.btn--favorites__star {
+  height: 1.3rem;
+}
+/* line 104, src/sass/components/_navbar.scss */
+.btn--favorites__chevron {
+  height: 1rem;
+}
+
+/* line 1, src/sass/components/_league.scss */
+.league {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  background-color: #fafafa;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .league {
+    background-color: #27272a;
+  }
+}
+/* line 15, src/sass/components/_league.scss */
+.league:hover, .league:focus {
+  background-color: #e4e4e7;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .league:hover, .league:focus {
+    background-color: #52525b;
+  }
+}
+/* line 24, src/sass/components/_league.scss */
+.league__img {
+  width: 3rem;
+}
+/* line 28, src/sass/components/_league.scss */
+.league__name {
+  flex: 1;
+  line-height: 1.8;
+}
+/* line 33, src/sass/components/_league.scss */
+.league__arrow {
+  width: 1.2rem;
+}
+
+/* line 40, src/sass/components/_league.scss */
+.modal-league__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 36rem) {
+  /* line 40, src/sass/components/_league.scss */
+  .modal-league__header {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+/* line 54, src/sass/components/_league.scss */
+.modal-league__img {
+  width: 4rem;
+  border: 1px solid;
+  border-color: #d4d4d8;
+  border-radius: 100%;
+  padding: .5rem;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .modal-league__img {
+    border-color: #52525b;
+  }
+}
+/* line 67, src/sass/components/_league.scss */
+.modal-league__name {
+  font-family: "Viga", sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+/* line 73, src/sass/components/_league.scss */
+.modal-league__controls {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+/* line 79, src/sass/components/_league.scss */
+.modal-league__table-container {
+  overflow-x: scroll;
+  position: relative;
+}
+@media screen and (min-width: 48rem) {
+  /* line 79, src/sass/components/_league.scss */
+  .modal-league__table-container {
+    overflow-x: visible;
+  }
+}
+
+/* line 90, src/sass/components/_league.scss */
+.league-standings {
+  border-collapse: separate;
+  border: 1px solid;
+  border-color: #e4e4e7;
+  border-radius: 0;
+  min-width: 100%;
+  overflow-x: scroll;
+}
+@media screen and (min-width: 48rem) {
+  /* line 90, src/sass/components/_league.scss */
+  .league-standings {
+    overflow: hidden;
+    border-radius: 0.375rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .league-standings {
+    border-color: #52525b;
+  }
+}
+/* line 109, src/sass/components/_league.scss */
+.league-standings thead {
+  background-color: #f4f4f5;
+  text-transform: uppercase;
+  font-size: .7rem;
+}
+/* line 114, src/sass/components/_league.scss */
+.league-standings thead th {
+  padding: 1rem;
+  text-align: center;
+  width: 2rem;
+  font-weight: 900;
+}
+/* line 120, src/sass/components/_league.scss */
+.league-standings thead th:first-of-type {
+  text-align: start;
+  background-color: #f4f4f5;
+  min-width: 8rem;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+@media screen and (min-width: 48rem) {
+  /* line 120, src/sass/components/_league.scss */
+  .league-standings thead th:first-of-type {
+    width: 16rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .league-standings thead th:first-of-type {
+    background-color: #3f3f46;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .league-standings thead th {
+    background-color: #3f3f46;
+  }
+}
+/* line 145, src/sass/components/_league.scss */
+.league-standings tbody {
+  background-color: #fafafa;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .league-standings tbody {
+    background-color: #27272a;
+  }
+}
+/* line 152, src/sass/components/_league.scss */
+.league-standings tbody td {
+  padding: 1rem;
+  text-align: center;
+  font-family: "Viga", sans-serif;
+}
+/* line 157, src/sass/components/_league.scss */
+.league-standings tbody td:first-of-type {
+  text-align: start;
+  position: sticky;
+  left: 0;
+  background-color: #fafafa;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .league-standings tbody td:first-of-type {
+    background-color: #27272a;
+  }
+}
+/* line 173, src/sass/components/_league.scss */
+.league-standings__team {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+/* line 179, src/sass/components/_league.scss */
+.league-standings__team__img {
+  width: 2.2rem;
+}
+/* line 183, src/sass/components/_league.scss */
+.league-standings__team__name {
+  display: none;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (min-width: 48rem) {
+  /* line 183, src/sass/components/_league.scss */
+  .league-standings__team__name {
+    display: block;
+  }
+}
+/* line 192, src/sass/components/_league.scss */
+.league-standings__team__abbr {
+  display: block;
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (min-width: 48rem) {
+  /* line 192, src/sass/components/_league.scss */
+  .league-standings__team__abbr {
+    display: none;
+  }
+}
+
+/* line 1, src/sass/components/_modals.scss */
+.modal {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  transition: visibility .3s ease, opacity .3s ease;
+  overflow-y: scroll;
+}
+/* line 8, src/sass/components/_modals.scss */
+.modal__background {
+  position: fixed;
+  inset: 0;
+  min-height: 100vh;
+  background-color: rgba(24, 24, 27, 0.95);
+  transition: opacity .3s ease;
+}
+/* line 16, src/sass/components/_modals.scss */
+.modal__loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #fff;
+  position: absolute;
+  inset: 0;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .modal__loader-container {
+    background-color: #27272a;
+  }
+}
+/* line 31, src/sass/components/_modals.scss */
+.modal__close {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  padding: .3rem;
+  margin-left: auto;
+  color: #a1a1aa;
+  background-color: #fafafa;
+  cursor: pointer;
+  transition: color .3s ease, border-color .3s ease;
+  -webkit-tap-highlight-color: transparent;
+  border: 2px solid;
+  border-color: #e4e4e7;
+  border-radius: 0.375rem;
+  z-index: 10;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .modal__close {
+    color: #a1a1aa;
+    border-color: #52525b;
+    background-color: #27272a;
+  }
+}
+/* line 53, src/sass/components/_modals.scss */
+.modal__close:hover {
+  color: #f87171;
+  border-color: #fecaca;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .modal__close:hover {
+    border-color: rgba(153, 27, 27, 0.5);
+  }
+}
+/* line 63, src/sass/components/_modals.scss */
+.modal__close:active {
+  color: #dc2626;
+  border-color: #fca5a5;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .modal__close:active {
+    border-color: rgba(153, 27, 27, 0.7);
+  }
+}
+/* line 75, src/sass/components/_modals.scss */
+.modal__window {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  background-color: #fff;
+  z-index: 1;
+  padding: 2rem;
+  border-radius: 0;
+  overflow-y: scroll;
+  transition: transform .3s ease;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .modal__window {
+    background-color: #27272a;
+  }
+}
+@media screen and (min-width: 48rem) {
+  /* line 75, src/sass/components/_modals.scss */
+  .modal__window {
+    margin-top: 2rem;
+    width: 70%;
+    min-height: auto;
+    border-radius: 0.375rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  /* line 102, src/sass/components/_modals.scss */
+  .modal__window::-webkit-scrollbar {
+    display: none;
+  }
+}
+/* line 108, src/sass/components/_modals.scss */
+.modal__window__content {
+  flex: 1;
+}
+
+/* line 1, src/sass/components/_loader.scss */
+.loader {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+/* line 10, src/sass/components/_loader.scss */
+.loader::after,
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  background-color: #2364aa;
+  border-radius: 50%;
+  animation: scale50 1s infinite ease-in-out;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .loader::after,
+  .loader::before {
+    background-color: #6593c4;
+  }
+}
+
+/* line 27, src/sass/components/_loader.scss */
+.loader::before {
+  top: auto;
+  bottom: 0;
+  background-color: #d4d4d8;
+  animation-delay: 0.5s;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scale50 {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+/* line 1, src/sass/layout/_footer.scss */
+.footer {
+  background-color: #153c66;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+@media screen and (min-width: 62rem) {
+  /* line 1, src/sass/layout/_footer.scss */
+  .footer {
+    padding: 1.8rem 0;
+    text-align: end;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .footer {
+    background-color: #27272a;
+  }
+}
+/* line 15, src/sass/layout/_footer.scss */
+.footer p {
+  color: #fafafa;
+}
+/* line 19, src/sass/layout/_footer.scss */
+.footer__link {
+  color: #fafafa;
+}
+
+/* line 1, src/sass/views/_home.scss */
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  /* line 1, src/sass/views/_home.scss */
+  .content {
+    display: flex;
+    flex-direction: row;
+    padding: 5rem 0;
+  }
+}
+
+/* line 14, src/sass/views/_home.scss */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  /* line 14, src/sass/views/_home.scss */
+  .main {
+    width: 70%;
+  }
+}
+/* line 24, src/sass/views/_home.scss */
+.main__title {
+  font-size: 2rem;
+  text-align: center;
+  max-width: 24rem;
+}
+@media screen and (min-width: 36rem) {
+  /* line 24, src/sass/views/_home.scss */
+  .main__title {
+    text-align: start;
+    align-self: flex-start;
+    max-width: 60%;
+  }
+}
+@media screen and (min-width: 62rem) {
+  /* line 24, src/sass/views/_home.scss */
+  .main__title {
+    max-width: none;
+    font-size: 3rem;
+  }
+}
+/* line 42, src/sass/views/_home.scss */
+.main__link {
+  align-self: stretch;
+}
+@media screen and (min-width: 36rem) {
+  /* line 42, src/sass/views/_home.scss */
+  .main__link {
+    display: none;
+  }
+}
+/* line 49, src/sass/views/_home.scss */
+.main__form {
+  align-self: stretch;
+}
+/* line 52, src/sass/views/_home.scss */
+.main__form input[type=search], .main__form select[type=search], .main__form option[type=search] {
+  width: 100%;
+}
+
+/* line 1, src/sass/views/_leagues.scss */
+.leagues {
+  width: 100%;
+}
+/* line 3, src/sass/views/_leagues.scss */
+.leagues__placeholder {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 36rem) {
+  /* line 3, src/sass/views/_leagues.scss */
+  .leagues__placeholder {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 48rem) {
+  /* line 3, src/sass/views/_leagues.scss */
+  .leagues__placeholder {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 62rem) {
+  /* line 3, src/sass/views/_leagues.scss */
+  .leagues__placeholder {
+    width: 80%;
+  }
+}
+/* line 22, src/sass/views/_leagues.scss */
+.leagues__results {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: auto;
+}
+@media screen and (min-width: 62rem) {
+  /* line 22, src/sass/views/_leagues.scss */
+  .leagues__results {
+    width: 80%;
+  }
+}
+/* line 34, src/sass/views/_leagues.scss */
+.leagues__header {
+  padding: 1rem;
+  padding-left: 5.5rem;
+  background-color: #f4f4f5;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: .7rem;
+  border: 1px solid;
+  border-bottom: none;
+  border-color: #e4e4e7;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .leagues__header {
+    background-color: #3f3f46;
+    border-color: #52525b;
+  }
+}
+/* line 54, src/sass/views/_leagues.scss */
+.leagues__list {
+  border: 1px solid;
+  border-color: #e4e4e7;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .leagues__list {
+    border-color: #52525b;
+  }
+}
+/* line 64, src/sass/views/_leagues.scss */
+.leagues__pagination {
+  text-align: right;
+  border: 1px solid;
+  border-top: none;
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  border-color: #e4e4e7;
+  background-color: #fafafa;
+  padding: 1rem;
+}
+@media (prefers-color-scheme: dark) {
+  /* line 56, src/sass/abstracts/_mixins.scss */
+  .leagues__pagination {
+    background-color: #27272a;
+    border-color: #52525b;
+  }
+}
+/* line 79, src/sass/views/_leagues.scss */
+.leagues__pagination button:not(:first-of-type) {
+  margin-left: .5rem;
+}
