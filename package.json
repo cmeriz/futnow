@@ -1,0 +1,24 @@
+{
+  "name": "futnow",
+  "version": "1.0.0",
+  "description": "Football Standing App",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmeriz/futnow.git"
+  },
+  "author": "Carlos Merizalde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmeriz/futnow/issues"
+  },
+  "homepage": "https://github.com/cmeriz/futnow#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.2.1",
+    "parcel": "^2.2.1",
+    "sass": "^1.49.0"
+  }
+}

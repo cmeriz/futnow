@@ -1,14 +1,16 @@
-const leaguesList = document.querySelectorAll('.leagues__list');
+const leaguesContainer = document.querySelector('.leagues');
 const modal = document.querySelector('.modal');
 const body = document.querySelector('body');
 
-leaguesList.forEach(function(leagueList){
-    leagueList.addEventListener('click', function(e){
-        const league = e.target.closest('.league');
+leaguesContainer.addEventListener('click', function(e){
+    const league = e.target.closest('.league');
+    if(league){
         modal.classList.remove('hidden-modal');
-        body.classList.add('no-scroll');
-    });
+    }
 });
+
+
+
 
 modal.addEventListener('click', function(e){
 
