@@ -13,21 +13,6 @@
         transition: opacity .3s ease;
     }
 
-    &__loader-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-        margin-bottom: 0;
-        background-color: $secondary-color-0;
-        position: absolute;
-        inset: 0;
-
-        @include dark-theme{
-            background-color: $secondary-color-800;
-        }
-    }
-
     &__close{
         display: block;
         width: 3rem;

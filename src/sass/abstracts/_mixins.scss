@@ -1,7 +1,7 @@
 // Media Queries
 
 @mixin xs-size{
-    @media screen and (min-width: 0rem) {      // 0px
+    @media screen and (min-width: 24rem) {      // 0px
         @content;
     }
 }

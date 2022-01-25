@@ -34,31 +34,49 @@
         display: inline-block;
         width: 3rem;
         height: 3rem;
-        border: unset;
+        border: 1px solid;
+        border-color: $primary-color-200;
         border-radius: $default-radius + 0em;
         cursor: pointer;
-        color: $secondary-color-50;
+        color: $primary-color-800;
         font-family: $primary-font;
         font-size: 1.05rem;
-        background-color: $primary-color-500;
+        background-color: $primary-color-100;
         transition: background-color .3s ease, color .3s ease;
 
         &:hover{
-            background-color: $primary-color-600;
+            background-color: $primary-color-200;
         }
 
         &:focus{
             outline: 3px solid $primary-color-300;
-            background-color: $primary-color-600;
+            background-color: $primary-color-200;
         }
 
         &:disabled{
             cursor: default;
-            background-color: rgba($secondary-color-50, .1);
-            color: $secondary-color-800;
+            background-color: $primary-color-500;
+            color: $secondary-color-50;
+            border: unset;
 
-            @include dark-theme{
-                color: $secondary-color-50;
+            &:hover{
+                background-color: $primary-color-500;
+            }
+
+        }
+
+        @include dark-theme{
+            background-color: $secondary-color-700;
+            border: unset;
+            color: $secondary-color-50;
+
+            &:hover{
+                background-color: $secondary-color-600;
+            }
+    
+            &:focus{
+                outline: 3px solid $secondary-color-500;
+                background-color: $secondary-color-600;
             }
 
         }

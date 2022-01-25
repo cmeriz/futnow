@@ -1,4 +1,4 @@
-@import "compass/reset";
+//@import "compass/reset";
 
 // abstracts
 @import 'abstracts/mixins';
@@ -8,6 +8,7 @@
 @import 'abstracts/variables';
 
 // base
+@import 'base/compass-reset';
 @import 'base/reset';
 
 // components

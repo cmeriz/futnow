@@ -7,8 +7,8 @@
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
   }
-  .loader::after,
-  .loader::before {
+.loader::after,
+.loader::before {
     content: '';  
     box-sizing: border-box;
     position: absolute;
@@ -20,30 +20,45 @@
     animation: scale50 1s infinite ease-in-out;
 
     @include dark-theme{
-      background-color: $primary-color-400;
+    background-color: $primary-color-400;
     }
 
-  }
-  .loader::before {
+}
+.loader::before {
     top: auto;
     bottom: 0;
     background-color: $secondary-color-300;
     animation-delay: 0.5s;
-  }
-  
-  @keyframes rotation {
+}
+
+@keyframes rotation {
     0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
     }
-  } 
-  @keyframes scale50 {
+} 
+@keyframes scale50 {
     0%, 100% {
-      transform: scale(0);
+    transform: scale(0);
     }
     50% {
-      transform: scale(1);
+    transform: scale(1);
     }
-  } 
+} 
+
+.loader-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: rgba($secondary-color-0, .5);
+    position: absolute;
+    inset: 0;
+
+    @include dark-theme{
+        background-color: $secondary-color-800;
+    }
+}

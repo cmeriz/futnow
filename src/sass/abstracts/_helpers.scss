@@ -1,14 +1,14 @@
 .img--light{
-    display: none;
+    display: none !important;
     @include light-theme{
-        display: block;   
+        display: block !important;   
     }
 }
 
 .img--dark{
-    display: none;
+    display: none !important;
     @include dark-theme{
-        display: block;   
+        display: block !important;   
     }
 }
 
