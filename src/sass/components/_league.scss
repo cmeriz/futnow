@@ -89,6 +89,10 @@
 }
 
 .league-standings{
+    min-height: 5rem;
+}
+
+.league-table{
     border-collapse: separate;
     border: 1px solid;
     border-color: $secondary-color-200;
@@ -151,7 +155,7 @@
         }
 
         td{
-            padding: 1rem;
+            padding: .7rem 1rem;
             text-align: center;
             font-family: $primary-font;
 
@@ -185,6 +189,7 @@
             display: none;
             line-height: 1.5;
             font-family: $secondary-font;
+            padding: .5rem 0;
             @include md-size{
                 display: block;
             }
