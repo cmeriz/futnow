@@ -2,12 +2,12 @@ const leaguesContainer = document.querySelector('.leagues');
 const modal = document.querySelector('.modal');
 const body = document.querySelector('body');
 
-leaguesContainer.addEventListener('click', function(e){
+/* leaguesContainer.addEventListener('click', function(e){
     const league = e.target.closest('.league');
     if(league){
         modal.classList.remove('hidden-modal');
     }
-});
+}); */
 
 
 

@@ -24,7 +24,7 @@ export default class View {
         this._parentElement.insertAdjacentHTML('afterbegin', markup);
     }
 
-    renderLoader = function(){
+    renderLoader(){
         const loader = `
             <div class="loader-container">
                 <span class="loader"></span>

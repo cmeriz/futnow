@@ -57,8 +57,9 @@
     background-color: rgba($secondary-color-0, .5);
     position: absolute;
     inset: 0;
+    z-index: 2;
 
     @include dark-theme{
-        background-color: $secondary-color-800;
+        background-color: rgba($secondary-color-900, .7);
     }
 }

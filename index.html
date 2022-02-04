@@ -179,12 +179,12 @@
                     </svg>
                 </button>
 
-                <div class="modal__window__content">
+                <div class="modal__window__content league-details">
                     <!-- <div class="modal__loader-container">
                         <span class="loader"></span>
                     </div> -->
 
-                    <header class="modal-league__header">
+                    <!-- <header class="modal-league__header">
                             <figure>
                                 <img class="modal-league__img img--light" src="src/img/epl_light.png" alt="English Premier League">
                                 <img class="modal-league__img img--dark" src="src/img/epl_dark.png" alt="English Premier League">
@@ -192,93 +192,97 @@
                             <h2 class="modal-league__name">English Premier League</h2>
                     </header>
     
-                    <div class="modal-league__controls">
-                        <select class="modal-league__select">
-                            <option>2020 - 2021</option>
-                            <option>2019 - 2020</option>
-                            <option>2018 - 2019</option>
-                        </select>
-                    </div>
-    
-                    <div class="modal-league__table-container">
-                        <table class="league-standings">
-                            <thead>
-                                <tr>
-                                    <th>Club</th>
-                                    <th>W</th>
-                                    <th>L</th>
-                                    <th>D</th>
-                                    <th>GP</th>
-                                    <th>F</th>
-                                    <th>A</th>
-                                    <th>P</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="league-standings__team">
-                                            <span class="league-standings__team__pos">1</span>
-                                            <figure>
-                                                <img class="league-standings__team__img" src="https://a.espncdn.com/i/teamlogos/soccer/500/382.png" alt="Manchester City">
-                                            </figure>
-                                            <span class="league-standings__team__name">Manchester City</span>
-                                            <span class="league-standings__team__abbr">MNC</span>
-                                        </div>
-                                    </td>
-                                    <td>10</td>
-                                    <td>5</td>
-                                    <td>7</td>
-                                    <td>24</td>
-                                    <td>8</td>
-                                    <td>6</td>
-                                    <td>37</td>
-                                </tr>
-    
-                                <tr>
-                                    <td>
-                                        <div class="league-standings__team">
-                                            <span class="league-standings__team__pos">2</span>
-                                            <figure>
-                                                <img class="league-standings__team__img" src="https://a.espncdn.com/i/teamlogos/soccer/500/360.png" alt="Manchester United">
-                                            </figure>
-                                            <span class="league-standings__team__name">Manchester United</span>
-                                            <span class="league-standings__team__abbr">MAN</span>
-                                        </div>
-                                    </td>
-                                    <td>10</td>
-                                    <td>5</td>
-                                    <td>7</td>
-                                    <td>24</td>
-                                    <td>8</td>
-                                    <td>6</td>
-                                    <td>37</td>
-                                </tr>
-    
-                                <tr>
-                                    <td>
-                                        <div class="league-standings__team">
-                                            <span class="league-standings__team__pos">3</span>
-                                            <figure>
-                                                <img class="league-standings__team__img" src="https://a.espncdn.com/i/teamlogos/soccer/500/364.png" alt="Liverpool">
-                                            </figure>
-                                            <span class="league-standings__team__name">Liverpool</span>
-                                            <span class="league-standings__team__abbr">LIV</span>
-                                        </div>
-                                    </td>
-                                    <td>10</td>
-                                    <td>5</td>
-                                    <td>7</td>
-                                    <td>24</td>
-                                    <td>8</td>
-                                    <td>6</td>
-                                    <td>37</td>
-                                </tr>
-    
-                            </tbody>
-                            <tfoot></tfoot>
-                        </table>
-                    </div>
+                    <div class="league-standings">
+                        <div class="modal-league__controls">
+                            <select class="modal-league__select season-select">
+                                <option>2020 - 2021</option>
+                                <option>2019 - 2020</option>
+                                <option>2018 - 2019</option>
+                            </select>
+                        </div>
+        
+                        <div class="modal-league__table-container">
+                            <table class="league-table">
+                                <thead>
+                                    <tr>
+                                        <th>Club</th>
+                                        <th>W</th>
+                                        <th>L</th>
+                                        <th>D</th>
+                                        <th>GP</th>
+                                        <th>F</th>
+                                        <th>A</th>
+                                        <th>P</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="league-table__team">
+                                                <span class="league-table__team__pos">1</span>
+                                                <figure>
+                                                    <img class="league-table__team__img" src="src/img/team_logo_placeholder.png" alt="Manchester City">
+                                                </figure>
+                                                <span class="league-table__team__name">Manchester City</span>
+                                                <span class="league-table__team__abbr">MNC</span>
+                                            </div>
+                                        </td>
+                                        <td>10</td>
+                                        <td>5</td>
+                                        <td>7</td>
+                                        <td>24</td>
+                                        <td>8</td>
+                                        <td>6</td>
+                                        <td>37</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>
+                                            <div class="league-table__team">
+                                                <span class="league-table__team__pos">2</span>
+                                                <figure>
+                                                    <img class="league-table__team__img" src="https://a.espncdn.com/i/teamlogos/soccer/500/360.png" alt="Manchester United">
+                                                </figure>
+                                                <span class="league-table__team__name">Manchester United</span>
+                                                <span class="league-table__team__abbr">MAN</span>
+                                            </div>
+                                        </td>
+                                        <td>10</td>
+                                        <td>5</td>
+                                        <td>7</td>
+                                        <td>24</td>
+                                        <td>8</td>
+                                        <td>6</td>
+                                        <td>37</td>
+                                    </tr>
+        
+                                    <tr>
+                                        <td>
+                                            <div class="league-table__team">
+                                                <span class="league-table__team__pos">3</span>
+                                                <figure>
+                                                    <img class="league-table__team__img" src="https://a.espncdn.com/i/teamlogos/soccer/500/364.png" alt="Liverpool">
+                                                </figure>
+                                                <span class="league-table__team__name">Liverpool</span>
+                                                <span class="league-table__team__abbr">LIV</span>
+                                            </div>
+                                        </td>
+                                        <td>10</td>
+                                        <td>5</td>
+                                        <td>7</td>
+                                        <td>24</td>
+                                        <td>8</td>
+                                        <td>6</td>
+                                        <td>37</td>
+                                    </tr>
+        
+                                </tbody>
+                                <tfoot></tfoot>
+                            </table>
+                        </div>
+                    </div> -->
+
+                    
                 </div>
             </section>
         </div>
