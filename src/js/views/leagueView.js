@@ -31,16 +31,6 @@ class LeagueView extends View {
     }
 
     _generateStandingMarkup(){
-
-        this._stats = this._data.standings[0].stats.filter(stat => 
-            stat.type === 'wins' ||
-            stat.type === 'losses' ||
-            stat.type === 'ties' ||
-            stat.type === 'gamesplayed' ||
-            stat.type === 'pointsfor' ||
-            stat.type === 'pointsagainst' ||
-            stat.type === 'points'
-        );
         
         let markup = `
             <div class="league-standings">
@@ -84,8 +74,8 @@ class LeagueView extends View {
                     <tr>
                         <th>Club</th>
         `;
-
-        markup += this._stats.map(stat => `<th>${stat.displayName}</th>`).join('');
+        
+        markup += this._data.standings[0].stats.map(stat => `<th>${stat.displayName}</th>`).join('');
 
         markup += `
                 </tr>
@@ -110,7 +100,7 @@ class LeagueView extends View {
                 </td>            
             `;
 
-            row += this._stats.map(stat => `<td>${stat.value}</td>`).join('');
+            row += standing.stats.map(stat => `<td>${stat.value}</td>`).join('');
 
             row += `</tr>`;
 

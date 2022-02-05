@@ -26,6 +26,7 @@ export const searchLeagues = async function(query){
 
         state.search.query = query;
         state.search.results = leagues;
+        state.search.page = 1;
     }
     catch(error){
         throw error;
@@ -45,7 +46,25 @@ export const getSearchResultsPage = function(page = state.search.page){
 export const searchStanding = async function(leagueCode, season){
     try{        
         const data = await getJSON(`${API_URL}/${leagueCode}/standings?season=${season.year}&sort=asc`);
-        state.league.standings = data.data.standings;
+        
+        state.league.standings = data.data.standings.map(el => {
+            let standing = {};
+            standing.team = el.team;
+            standing.stats = el.stats.filter(stat =>  
+                stat.type === 'wins' ||
+                stat.type === 'losses' ||
+                stat.type === 'ties' ||
+                stat.type === 'gamesplayed' ||
+                stat.type === 'pointsfor' ||
+                stat.type === 'pointsagainst' ||
+                stat.type === 'points'
+            );
+
+            return standing;
+        });
+
+        console.log(state.league.standings);
+
         state.league.curSeason = season;
     }
     catch(error){
